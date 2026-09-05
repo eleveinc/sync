@@ -27,7 +27,7 @@ app.post('/extract', async (req, res) => {
             noCallHome: true,
             noCheckCertificate: true,
             youtubeSkipDashManifest: true,
-            format: 'bestaudio'
+            format: 'bestaudio',
             client: 'ANDROID'
         });
 
