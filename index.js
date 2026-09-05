@@ -24,11 +24,9 @@ app.post('/extract', async (req, res) => {
         const output = await youtubedl(fullUrl, {
             dumpSingleJson: true,
             noWarnings: true,
-            noCallHome: true,
             noCheckCertificate: true,
-            youtubeSkipDashManifest: true,
             format: 'bestaudio',
-            extractorArgs: 'youtube:client=android'
+            extractorArgs: 'youtube:client=ios'
         });
 
         const rawUrl = output.url;
