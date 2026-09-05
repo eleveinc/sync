@@ -28,7 +28,7 @@ app.post('/extract', async (req, res) => {
             noCheckCertificate: true,
             youtubeSkipDashManifest: true,
             format: 'bestaudio',
-            client: 'ANDROID'
+            extractorArgs: 'youtube:client=android'
         });
 
         const rawUrl = output.url;
