@@ -34,10 +34,9 @@ app.post('/extract', async (req, res) => {
             noWarnings: true,
             noCheckCertificate: true,
             format: 'bestaudio/best',
-            extractorArgs: 'youtube:player-client=web',
+            extractorArgs: 'youtube:player_client=default,web_embedded',
             ...(fs.existsSync(COOKIE_PATH) && { cookies: COOKIE_PATH })
         });
-
         const rawUrl = output.url;
         if (!rawUrl) throw new Error("yt-dlp could not extract the raw URL.");
 
