@@ -26,7 +26,7 @@ app.post('/extract', async (req, res) => {
             noWarnings: true,
             noCheckCertificate: true,
             format: 'bestaudio',
-            extractorArgs: 'youtube:client=ios'
+            cookies: '/etc/secrets/cookies.txt'
         });
 
         const rawUrl = output.url;
