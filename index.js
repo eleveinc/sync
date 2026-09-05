@@ -29,11 +29,11 @@ app.post('/extract', async (req, res) => {
         const fullUrl = `https://www.youtube.com/watch?v=${videoId}`;
         console.log(`\n[API] Extracting stream for: ${fullUrl}`);
         
-       const output = await youtubedl(fullUrl, {
+      const output = await youtubedl(fullUrl, {
             dumpSingleJson: true,
             noWarnings: true,
             noCheckCertificate: true,
-            format: 'bestaudio',
+            format: 'bestaudio/best',
             extractorArgs: 'youtube:player-client=web',
             ...(fs.existsSync(COOKIE_PATH) && { cookies: COOKIE_PATH })
         });
